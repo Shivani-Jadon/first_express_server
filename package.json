@@ -1,0 +1,16 @@
+{
+  "name": "contact_list",
+  "version": "1.0.0",
+  "description": "creating a contact list on express server",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.1.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shivani",
+  "license": "ISC"
+}

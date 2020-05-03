@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    background-color: lightcyan;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: "Spicy Rice", cursive;
+}
+
+h1{
+    text-align: center;
+    color: rebeccapurple;
+}
+
+ol{
+    text-align: center;
+    list-style-position: inside;
+    padding: 0;
+    overflow-y: scroll;
+    max-height: 60vh;
+    border-top: 5px cadetblue solid;
+    border-bottom: 5px cadetblue solid;
+    
+}
+ 
+#mycontact-list{
+    background-color: rebeccapurple;
+    color: lightcyan;
+    list-style-type: none;
+    counter-increment: li;
+    position: relative;
+    box-shadow: 0px 0px 5px black;
+}
+
+.name-container{
+    display: flex;
+    align-items: center;    
+    padding: 2%;
+} 
+
+.name-container::before{
+    content: counter(li);
+    text-align: right;
+    justify-content: center;
+    width: 20%;
+}
+
+.name-container p{
+    width: 60%;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.name-container a{
+    z-index: 1;
+    color: seashell;
+}
+
+.phone-container{
+    display: flex;
+    justify-content: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    font-family: "Habibi", serif;
+}
+
+/* styling check-box */
+.toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin: 0;
+}
+
+/* number wwill appear after checking toggle */
+.toggle:checked ~.phone-container{
+    max-height: 100%;
+}
+
+
+/* styling form div and form*/
+.adding_contact{
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+}
+
+#contact-form{
+    /* display: none; */
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    margin: 2%;
+}
+#contact-form *{
+    margin: 1%;
+    text-align: center;
+}
+
+.adding_contact button{
+    background-color: transparent;
+    color: navy;
+    border: 0;
+    padding: 5px;
+    border: 2px navy solid;
+    border-radius: 10px;
+    font-family: "Spicy Rice", cursive;
+}
+
+#contact-form label{
+    color: navy;
+}
+
+#contact-form input{
+    background: transparent;
+    border: 0;
+    border-bottom: 1px navy solid;
+    color: navy;
+    padding: 5px;
+}
+
+#add:hover{
+    color: lightcyan;
+    background-color: darkcyan;
+}
+
+#add:hover #contact-form{
+    display: flex;
+}
