@@ -18,7 +18,7 @@
                     <div class="name-container">
                         
                         <p><%= i.name %></p>
-                        <a class="delete" href="/delete_contact/?id=<%= i.id%>"><i class="fas fa-times-circle"></i></a>                      
+                        <a href="/delete_contact/?id=<%= i.id%>"><i class="fas fa-times-circle"></i></a>                      
                     </div>
                     <div class="phone-container">
                         <p><%= i.phoneNo %></p>
@@ -28,17 +28,22 @@
         </ol>
 
         <div class="adding_contact">
-            <button type="button" id="add">Add Contact</button>
-            <div>
+            <a href="#contact-form" id="form-appear">
+                <button type="button" id="add">Add Contact</button>
+            </a>
                 <form action="/new_contact" method="POST" id="contact-form">
+                    <!-- for closing the form -->
+                    <label id="close"><a href="#"><i class="fas fa-times"></i></a></label><br/>
+                    <!-- fields of the form -->
                     <label>Name</label>
                     <input name="name" placeholder="Enter Name" required> <br/>
                     <label>Phone No. </label>
                     <input name="phoneNo" placeholder="Enter phone number"> <br/>
-                    <button type="submit">Create Contact</button>
+                    <!-- submit button -->
+                    <button type="submit" id="submit_info">Create Contact</button>
+                    <!-- reset button -->
+                    <button type="reset" id="reset-btn">Reset</button>
                 </form>
-            </div>
-            
         </div>
         
     </body>

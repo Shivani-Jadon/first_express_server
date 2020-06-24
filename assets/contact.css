@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-color: lightcyan;
+    background-color: #F5F5F5;
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-family: "Spicy Rice", cursive;
 }
@@ -23,7 +23,7 @@ ol{
  
 #mycontact-list{
     background-color: rebeccapurple;
-    color: lightcyan;
+    color: #F5F5F5;
     list-style-type: none;
     counter-increment: li;
     position: relative;
@@ -79,6 +79,22 @@ ol{
     max-height: 100%;
 }
 
+/* styling add contact button */
+#add{
+    background-color: transparent;
+    color: navy;
+    border: 0;
+    padding: 5px;
+    border: 2px navy solid;
+    border-radius: 10px;
+    font-family: "Spicy Rice", cursive;
+}
+
+/* adding hover event button */
+#add:hover{
+    color: #F5F5F5;
+    background-color: darkcyan;
+}
 
 /* styling form div and form*/
 .adding_contact{
@@ -88,25 +104,58 @@ ol{
 }
 
 #contact-form{
-    /* display: none; */
+    display: none;
+    max-width: 0%;
+    max-height: 0%;
+    /* position: relative;
+    top: 0;
+    left: 0; */
+    overflow: hidden;
+    margin: 2%;
+    margin: 20px 2%;
+    background-color: lightgoldenrodyellow;
+    box-shadow: 0px 0px 5px black;
+}
+
+#contact-form:target{
+    display: block;
     max-width: 100%;
     max-height: 100%;
-    position: relative;
-    margin: 2%;
+    /* position: static; */
 }
+
 #contact-form *{
     margin: 1%;
     text-align: center;
 }
 
-.adding_contact button{
+/* styling closor tag */
+#close{
+    position: relative;
+    left: 40%;
+}
+
+#close a i:hover{
+    transform: scale(1.5);
+}
+
+#submit_info, #reset-btn{
     background-color: transparent;
     color: navy;
     border: 0;
-    padding: 5px;
+    padding: 3px;
+    margin: 10px;
     border: 2px navy solid;
     border-radius: 10px;
     font-family: "Spicy Rice", cursive;
+}
+
+#submit_info:hover{
+    background-color: lightgreen;
+}
+
+#reset-btn:hover{
+    background-color: lightsalmon;
 }
 
 #contact-form label{
@@ -121,11 +170,3 @@ ol{
     padding: 5px;
 }
 
-#add:hover{
-    color: lightcyan;
-    background-color: darkcyan;
-}
-
-#add:hover #contact-form{
-    display: flex;
-}

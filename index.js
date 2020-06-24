@@ -38,7 +38,7 @@ app.get("/contact", function(req, res){
 
     Contact.find({}, function(err, contacts){
         if(err){
-            console.log("Error in reading from the database ", err);
+            console.log("Error in reading from the view ", err);
             return;
         }
 
